@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h1>打个招呼</h1>
+  <introduce title="早上好"></introduce>
+</div>
+
+</body>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+  //定义全局组件
+  Vue.component("introduce",{
+    template:'<h1>{{title}}<h1/>',
+    props:['title']
+  });
+//定义一个局部组件
+  const  myList={
+    template: '<url><li v-for="item"in item> </li>'
+  }
+  //
+  var  app= new Vue({
+    el:"#app"
+  });
+</script>
+
+</html>
